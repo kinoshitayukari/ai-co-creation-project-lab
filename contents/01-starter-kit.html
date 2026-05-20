@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Python金融データ分析スターターキット | AI共創プロジェクト研究所</title>
+<meta content="Python金融データ分析スターターキットを、初心者にも読みやすい記事として整理。AIと一緒に自分のテーマを形にするための実践コンテンツです。" name="description"/>
+<link href="../style.css?v=article-rewrite-1" rel="stylesheet"/>
+</head>
+<body>
+<header class="site-header">
+<a class="logo" href="../index.html">AI共創プロジェクト研究所</a>
+<nav><a href="../index.html#blog">記事</a><a href="../contents/index.html">ライブラリ</a><a href="../downloads/ai-self-project-sheet.html">無料シート</a></nav>
+</header>
+<main class="article-wrap library-page rewritten-library-page">
+<article class="article note-article readable-article">
+<p class="eyebrow">金融データ分析 / Article</p>
+<h1>Python金融データ分析スターターキット</h1>
+<div class="article-meta"><span>金融データ分析</span><span>読み物として再編集</span></div>
+<section class="article-opening">
+<p>「AIを使えば何かできそう」と思っても、いざ自分のことになると、何から始めればいいのか分からなくなることがあります。情報は多いのに、自分のテーマに落とし込もうとすると急に手が止まる。そんな不安は、とても自然なものです。</p>
+<p>この記事では、<strong>データを見ながら考える力を育てるための金融データ分析コンテンツ</strong>として読めるように、元の設計メモを読み物として整理し直しました。</p>
+</section>
+<section class="answer-first">
+<p class="eyebrow">結論</p>
+<h2>完璧な計画より、今日ひとつ形にすることが先です</h2>
+<p>大切なのは、最初から大きな事業や完璧な教材を作ることではありません。自分の関心をひとつ選び、読者に伝わる言葉へ直し、小さく公開して反応を見ることです。このページは、その一歩を迷わず進めるための材料として使えます。</p>
+</section>
+<section class="reader-gain">
+<h2>この記事で得られること</h2>
+<ul>
+<li>自分のテーマを、発信や教材に変える考え方が分かる</li>
+<li>何から手をつけるべきか、優先順位が見える</li>
+<li>読み終わったあとに、今日の小さな行動を決められる</li>
+</ul>
+</section>
+<section class="content-body"><h2>詳しい内容</h2>
+<h2>はじめに</h2>
+<p>このキットは、PythonとAIを使って金融データを整理し、集計・可視化・レポート化するためのスターターキットです。</p>
+<p>目的は、相場予想や売買判断を提供することではありません。</p>
+<p>CSV、API、取引履歴、バックテスト結果などの金融データをPythonで扱い、自分の学習・受託・発信に使える成果物へ変換することです。</p>
+<h2>このキットでできること</h2>
+<ul>
+<li>分析対象の金融データを整理できる</li>
+<li>CSVやAPIデータをどう処理するか決められる</li>
+<li>Python分析のテーマを設計できる</li>
+<li>時間帯別・曜日別・銘柄別の集計テーマを作れる</li>
+<li>バックテスト結果や取引履歴をレポート化できる</li>
+<li>Hyperliquid fillsのような約定データを分析対象にできる</li>
+<li>noteやYouTube用の分析コンテンツに変換できる</li>
+</ul>
+<h2>注意事項</h2>
+<p>このキットは、投資助言・売買推奨を目的としたものではありません。</p>
+<p>扱う内容は、金融データの整形、集計、可視化、検証、レポート作成のためのテンプレートです。</p>
+<p>実際の投資判断は、必ずご自身の責任で行ってください。</p>
+<h2>ワーク1: 分析するデータを決める</h2>
+<table>
+<thead>
+<tr>
+<th>データ種類</th>
+<th>分析目的</th>
+<th>形式</th>
+<th>使用ツール</th>
+<th>メモ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BTCUSD価格データ</td>
+<td>時間帯別の変動分析</td>
+<td>CSV</td>
+<td>Python / pandas</td>
+<td></td>
+</tr>
+<tr>
+<td>バックテスト結果</td>
+<td>PF、勝率、DDの集計</td>
+<td>CSV / JSON</td>
+<td>Python / pandas</td>
+<td></td>
+</tr>
+<tr>
+<td>取引履歴</td>
+<td>損益・銘柄・時間帯の傾向分析</td>
+<td>CSV</td>
+<td>Python / pandas</td>
+<td></td>
+</tr>
+<tr>
+<td>Hyperliquid fills</td>
+<td>約定履歴の集計</td>
+<td>API / CSV</td>
+<td>Python</td>
+<td></td>
+</tr>
+<tr>
+<td>金利・通貨データ</td>
+<td>市場環境の整理</td>
+<td>CSV / 手入力</td>
+<td>Python / Sheets</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>ワーク2: Python分析テーマ設計</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分析したいデータ</td>
+<td></td>
+</tr>
+<tr>
+<td>入力形式</td>
+<td>CSV / API / Excel / JSON</td>
+</tr>
+<tr>
+<td>知りたいこと</td>
+<td></td>
+</tr>
+<tr>
+<td>必要な集計</td>
+<td>時間帯別 / 曜日別 / 銘柄別 / 勝敗別</td>
+</tr>
+<tr>
+<td>作りたいグラフ</td>
+<td>折れ線 / 棒 / ヒートマップ / 散布図</td>
+</tr>
+<tr>
+<td>納品物</td>
+<td>Pythonコード / CSV / グラフ / レポート</td>
+</tr>
+<tr>
+<td>注意点</td>
+<td>投資助言ではなく、データ分析として扱う</td>
+</tr>
+</tbody>
+</table>
+<h2>ワーク3: 分析メモテンプレート</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>日付</td>
+<td></td>
+</tr>
+<tr>
+<td>分析したデータ</td>
+<td></td>
+</tr>
+<tr>
+<td>データ期間</td>
+<td></td>
+</tr>
+<tr>
+<td>前処理した内容</td>
+<td></td>
+</tr>
+<tr>
+<td>集計した内容</td>
+<td></td>
+</tr>
+<tr>
+<td>可視化した内容</td>
+<td></td>
+</tr>
+<tr>
+<td>気づいた傾向</td>
+<td></td>
+</tr>
+<tr>
+<td>AIに要約させる内容</td>
+<td></td>
+</tr>
+<tr>
+<td>次に改善すること</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>ワーク4: AI要約プロンプト</h2>
+<pre><code>あなたは金融データ分析レポートの編集アシスタントです。
+以下のPython分析メモをもとに、投資助言ではなく、データ分析・検証目的の要約を作成してください。
+
+分析メモ:
+【ここに入力】
+
+条件:
+- 売買推奨はしない
+- 断定的な予想はしない
+- 集計結果から読み取れる傾向を整理する
+- 不確実性を明記する
+- データ期間、サンプル数、限界を明記する
+- 初心者にもわかる表現にする
+
+出力形式:
+1. 分析の目的
+2. 使ったデータ
+3. 主な集計結果
+4. 見えた傾向
+5. データ上の限界
+6. 注意点
+7. 次に改善する分析
+</code></pre>
+<h2>ワーク5: Hyperliquid fills分析シート</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>対象ウォレット / ID</td>
+<td></td>
+</tr>
+<tr>
+<td>対象期間</td>
+<td></td>
+</tr>
+<tr>
+<td>対象銘柄</td>
+<td></td>
+</tr>
+<tr>
+<td>fills件数</td>
+<td></td>
+</tr>
+<tr>
+<td>open / close件数</td>
+<td></td>
+</tr>
+<tr>
+<td>buy / sell件数</td>
+<td></td>
+</tr>
+<tr>
+<td>closedPnl合計</td>
+<td></td>
+</tr>
+<tr>
+<td>時間帯別の傾向</td>
+<td></td>
+</tr>
+<tr>
+<td>推定・仮定</td>
+<td></td>
+</tr>
+<tr>
+<td>注意点</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>AI分析プロンプト</h3>
+<pre><code>あなたは暗号資産市場のデータ分析アシスタントです。
+以下のfills集計メモをもとに、投資助言ではなく、約定履歴データの傾向整理をしてください。
+
+fills集計メモ:
+【ここに入力】
+
+条件:
+- 売買推奨はしない
+- 特定銘柄の購入や売却を勧めない
+- 過去の約定データから見える傾向だけを整理する
+- 不確実性と限界を明記する
+
+出力形式:
+1. データ概要
+2. 主な集計結果
+3. 時間帯・銘柄・方向の傾向
+4. 推定に含まれる限界
+5. 次に追加したい分析
+</code></pre>
+<h2>ワーク6: note記事化テンプレート</h2>
+<table>
+<thead>
+<tr>
+<th>セクション</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>タイトル</td>
+<td></td>
+</tr>
+<tr>
+<td>今回分析したデータ</td>
+<td></td>
+</tr>
+<tr>
+<td>Pythonで処理した内容</td>
+<td></td>
+</tr>
+<tr>
+<td>グラフ・集計結果</td>
+<td></td>
+</tr>
+<tr>
+<td>AIに要約させた内容</td>
+<td></td>
+</tr>
+<tr>
+<td>自分の学び</td>
+<td></td>
+</tr>
+<tr>
+<td>注意点</td>
+<td></td>
+</tr>
+<tr>
+<td>次回改善する分析</td>
+<td></td>
+</tr>
+<tr>
+<td>商品・無料配布への導線</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>ワーク7: YouTube台本化テンプレート</h2>
+<table>
+<thead>
+<tr>
+<th>セクション</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>冒頭</td>
+<td>今日は何のデータをPythonで分析するか</td>
+</tr>
+<tr>
+<td>前提</td>
+<td>投資助言ではなく学習目的であること</td>
+</tr>
+<tr>
+<td>データ確認</td>
+<td>CSV、API、取引履歴、バックテスト結果など</td>
+</tr>
+<tr>
+<td>Python処理</td>
+<td>整形、集計、可視化</td>
+</tr>
+<tr>
+<td>AI要約</td>
+<td>AIに整理させた内容</td>
+</tr>
+<tr>
+<td>自分の解釈</td>
+<td>断定せず、学びとして話す</td>
+</tr>
+<tr>
+<td>次回予告</td>
+<td>次に見るデータ</td>
+</tr>
+<tr>
+<td>CTA</td>
+<td>スターターキットや講座への案内</td>
+</tr>
+</tbody>
+</table>
+<h2>ワーク8: レポート構成テンプレート</h2>
+<h1>Python金融データ分析レポート</h1>
+<h2>1. 分析の目的</h2>
+<h2>2. 使用データ</h2>
+<h2>3. 前処理</h2>
+<h2>4. 集計結果</h2>
+<h2>5. 可視化</h2>
+<h2>6. AI要約</h2>
+<h2>7. 自分の学び</h2>
+<h2>8. 注意事項</h2>
+<p>このレポートはデータ分析・学習・検証を目的としたものであり、投資助言や売買推奨ではありません。</p>
+<h2>最後に</h2>
+<p>金融分析を商品化する場合、重要なのは「予想を売る」のではなく「Pythonで分析できる型を売る」ことです。</p>
+<p>Pythonでデータを処理し、AIで要約し、グラフとレポートに変換する。</p>
+<p>このキットは、その最初の型として使えます。</p>
+</section>
+<section class="today-action">
+<h2>今日やること</h2>
+<ol>
+<li>この記事の中で、自分に関係しそうな見出しを1つ選ぶ</li>
+<li>そこに書かれている内容を、自分のテーマに置き換えて1行で書く</li>
+<li>その1行をもとに、記事・シート・投稿のどれか1つを小さく作り始める</li>
+</ol>
+</section>
+<section class="article-cta content-article-cta">
+<h2>次に進むなら</h2>
+<p>読んで終わりにせず、自分のテーマに置き換えて1つだけ書き出してみてください。必要なら、無料シートを使うと考えが整理しやすくなります。</p>
+<div class="cta-row"><a class="btn primary" href="../downloads/ai-self-project-sheet.html">無料シートを見る</a><a class="btn ghost" href="../contents/index.html">ライブラリへ戻る</a></div>
+</section>
+</article>
+</main>
+</body>
+</html>
